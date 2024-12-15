@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romir's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Romir's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Welcome to My Personal Website</h2>
+        <p>Explore my work, learn about my skills, and get in touch.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Romir, a passionate frontend developer with experience in building interactive and visually stunning websites. I love coding and creating user experiences that are both functional and aesthetically pleasing.</p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="showModal('Project 1', 'Description of Project 1.')">
+                <h3>Project 1</h3>
+                <p>Click to learn more.</p>
+            </div>
+            <div class="grid-item" onclick="showModal('Project 2', 'Description of Project 2.')">
+                <h3>Project 2</h3>
+                <p>Click to learn more.</p>
+            </div>
+            <div class="grid-item" onclick="showModal('Project 3', 'Description of Project 3.')">
+                <h3>Project 3</h3>
+                <p>Click to learn more.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-bar">
+            <div class="skill">
+                <label>HTML</label>
+                <div class="progress"><div style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+                <label>CSS</label>
+                <div class="progress"><div style="width: 85%;">85%</div></div>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="progress"><div style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <label>React</label>
+                <div class="progress"><div style="width: 75%;">75%</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Romir. All rights reserved.</p>
+    </footer>
+    <div id="modal" class="modal">
+        <button class="close-modal" onclick="closeModal()">Close</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
